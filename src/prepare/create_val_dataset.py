@@ -117,4 +117,4 @@ print(json.dumps(tool_use_args, indent=2, ensure_ascii=False))
 
 # ファイルに書き出し
 with open("../../dataset/rawdata/validation.json", "w") as f:
-    json.dump(tool_use_args["dataset"], f, indent=4, ensure_ascii=False)
+    json.dump(tool_use_args["dataset"], f, indent=2, ensure_ascii=False)

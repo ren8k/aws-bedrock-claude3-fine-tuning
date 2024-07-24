@@ -2,13 +2,14 @@
 
 ## TODO
 
-- [ ] データセットの調査
-- [ ] データセットの作成
+- [x] データセットの調査
+- [x] データセットの作成
 - [ ] Fine-Tuning Job の実行
   - model name: claude-3-haiku-ft-model
   - job name: claude-3-haiku-ft-job
 - [ ] 評価してみたい
 - [ ] 検証結果ブログの執筆
+  - [ ] create_val_dataset.py のリファクタリング
 
 ## Survey
 
@@ -39,9 +40,20 @@
 - https://www.perplexity.ai/search/llmnofine-tuningwoxing-uji-nil-LXDILLZ.Q4ukZ9pY66Tnpg
 - https://www.perplexity.ai/search/llmwofine-tuningsurukotote-jin-h8DcckwlSg6e_1ZoY.2SVA
 
+### AWS
+
+- https://aws.amazon.com/jp/about-aws/whats-new/2024/07/fine-tuning-anthropics-claude-3-haiku-bedrock-preview/
+- https://aws.amazon.com/jp/blogs/machine-learning/fine-tune-anthropics-claude-3-haiku-in-amazon-bedrock-to-boost-model-accuracy-and-quality/
+- https://docs.aws.amazon.com/bedrock/latest/userguide/custom-model-supported.html
+
 ### qiita
 
 - https://qiita.com/revsystem/items/303487a39eea5924187c
 - https://qiita.com/ren8k/items/3d5f66df251703b8407e
 - https://qiita.com/kazuneet/items/9b0dc3c37cc33f7b61d6
 - https://qiita.com/moritalous/items/ff2763bcd9408a1b395a
+
+### ft のメリット
+
+- 最小限のコンテキストのみで良いので，コストが低い
+- 低レイテンシー

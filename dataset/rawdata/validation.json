@@ -1,62 +1,130 @@
 [
   {
     "question": "What is Amazon Bedrock?",
-    "answer": "Amazon Bedrock is a fully managed service that offers a choice of high-performing foundation models and capabilities for building generative AI applications. It simplifies development with security, privacy, and responsible AI features."
+    "answer": "Amazon Bedrock is a fully managed service that offers a choice of high-performing foundation models along with capabilities for building generative AI applications, simplifying development with security, privacy, and responsible AI features."
   },
   {
-    "question": "What key features does Amazon Bedrock provide?",
-    "answer": "Amazon Bedrock's key features include: experimenting with prompts and configurations, augmenting response generation with knowledge bases, building agents to reason and carry out tasks, customizing models with training data, improving efficiency with provisioned throughput, evaluating models, and implementing safeguards with guardrails."
+    "question": "What can you do with Amazon Bedrock?",
+    "answer": "With Amazon Bedrock, you can experiment with and evaluate top foundation models for your use cases, privately customize them with your own data using techniques like fine-tuning and retrieval augmented generation, and build agents that execute tasks using your enterprise systems and data sources."
   },
   {
-    "question": "How do you pay for using Amazon Bedrock?",
-    "answer": "With Amazon Bedrock, you pay to run inference on the third-party foundation models. Pricing is based on the volume of input and output tokens, and whether you have purchased provisioned throughput for the model."
+    "question": "How do you get started with Amazon Bedrock?",
+    "answer": "Amazon Bedrock provides a serverless experience, allowing you to quickly get started, privately customize foundation models with your data, and easily integrate and deploy them into your applications using AWS tools without managing any infrastructure."
   },
   {
-    "question": "What techniques can you use to customize foundation models in Amazon Bedrock?",
-    "answer": "You can customize foundation models in Amazon Bedrock by providing training data for fine-tuning or continued-pretraining. This adjusts the model's parameters to improve performance on specific tasks or domains."
+    "question": "What are some key features of Amazon Bedrock?",
+    "answer": "Key features of Amazon Bedrock include the ability to experiment with prompts and configurations, augment response generation with your data sources, build task-completing agents, adapt models with training data, improve efficiency with provisioned throughput, evaluate models, and prevent inappropriate content with guardrails."
   },
   {
-    "question": "How can you determine the best foundation model for your use case in Amazon Bedrock?",
-    "answer": "Amazon Bedrock allows you to evaluate outputs of different models with built-in or custom prompt datasets. This helps you determine the model that is best suited for your specific application."
+    "question": "How is Amazon Bedrock priced?",
+    "answer": "With Amazon Bedrock, you pay to run inference on the third-party foundation models. Pricing is based on the volume of input and output tokens and whether you have purchased provisioned throughput for the model."
   },
   {
-    "question": "What are agents in Amazon Bedrock used for?",
-    "answer": "In Amazon Bedrock, agents use foundation models, make API calls, and optionally query knowledge bases in order to reason and carry out tasks for customers. They help build applications that can assist users."
+    "question": "What foundation models does Amazon Bedrock provide access to?",
+    "answer": "Amazon Bedrock provides access to a wide range of high-performing foundation models from leading AI startups and Amazon through a unified API."
   },
   {
-    "question": "How does Amazon Bedrock help prevent inappropriate or unwanted content?",
-    "answer": "Amazon Bedrock provides guardrails that allow you to implement safeguards for your generative AI applications. These help prevent the generation of inappropriate or unwanted content."
+    "question": "How can you customize foundation models in Amazon Bedrock?",
+    "answer": "Amazon Bedrock allows you to privately customize foundation models with your own data using techniques such as fine-tuning and retrieval augmented generation."
+  },
+  {
+    "question": "What is retrieval augmented generation in Amazon Bedrock?",
+    "answer": "Retrieval augmented generation in Amazon Bedrock refers to augmenting a foundation model's response generation by querying knowledge bases created from your own data sources."
+  },
+  {
+    "question": "How can you build agents with Amazon Bedrock?",
+    "answer": "With Amazon Bedrock, you can build agents that use foundation models, make API calls, and optionally query knowledge bases to reason through and carry out tasks for your customers."
   },
   {
     "question": "What is provisioned throughput in Amazon Bedrock used for?",
-    "answer": "Provisioned throughput in Amazon Bedrock allows you to run inference on foundation models more efficiently and at discounted rates. This improves your application's performance and cost effectiveness."
+    "answer": "Provisioned throughput in Amazon Bedrock allows you to run inference on foundation models more efficiently and at discounted rates by purchasing dedicated capacity."
+  },
+  {
+    "question": "How can you determine the best foundation model for your use case in Amazon Bedrock?",
+    "answer": "Amazon Bedrock provides model evaluation capabilities that allow you to evaluate outputs of different models with built-in or custom prompt datasets to determine the model best suited for your application."
+  },
+  {
+    "question": "What are guardrails used for in Amazon Bedrock?",
+    "answer": "Guardrails in Amazon Bedrock allow you to implement safeguards for your generative AI applications to prevent inappropriate or unwanted content."
+  },
+  {
+    "question": "How is billing handled for Amazon Bedrock?",
+    "answer": "When you sign up for AWS, your account is automatically signed up for Amazon Bedrock, but you are only charged for the services you use. Billing is based on inference usage of the foundation models."
+  },
+  {
+    "question": "Where can you see pricing details for foundation models in Amazon Bedrock?",
+    "answer": "Pricing details for each foundation model in Amazon Bedrock are listed in the console on the Model providers page. The price is based on input/output tokens and provisioned throughput."
+  },
+  {
+    "question": "What is included in the Amazon Bedrock serverless experience?",
+    "answer": "The Amazon Bedrock serverless experience allows you to quickly get started, customize models with your data, and integrate and deploy them into your applications using AWS tools without managing infrastructure."
   },
   {
     "question": "How can you experiment with prompts and configurations in Amazon Bedrock?",
-    "answer": "Amazon Bedrock allows you to run model inference by sending prompts with different configurations and foundation models. You can use the API or the text, image, and chat playgrounds in the console to experiment."
+    "answer": "Amazon Bedrock allows you to run model inference by sending prompts with different configurations and foundation models to generate responses. You can use the API or text, image, and chat playgrounds in the console to experiment."
   },
   {
     "question": "What are knowledge bases used for in Amazon Bedrock?",
-    "answer": "Knowledge bases in Amazon Bedrock are created by uploading your own data sources. These can then be queried to augment a foundation model's generation of responses, providing additional context."
+    "answer": "In Amazon Bedrock, you can create knowledge bases by uploading your own data sources. These knowledge bases can then be queried to augment a foundation model's generation of responses."
   },
   {
-    "question": "Does Amazon Bedrock support customizing foundation models for specific domains?",
-    "answer": "Yes, Amazon Bedrock allows you to customize foundation models for certain domains. You can provide domain-specific training data to adjust the model's parameters and improve its performance in that domain."
+    "question": "How can you improve a foundation model's performance on specific tasks with Amazon Bedrock?",
+    "answer": "Amazon Bedrock allows you to customize a foundation model by providing training data for fine-tuning or continued pre-training. This helps adjust the model's parameters and improve its performance on specific tasks or domains."
   },
   {
     "question": "What is model evaluation in Amazon Bedrock?",
-    "answer": "Model evaluation in Amazon Bedrock is a feature that lets you test the outputs of different foundation models using built-in or custom prompt datasets. This helps determine which model performs best for your specific use case."
+    "answer": "Model evaluation in Amazon Bedrock is a capability that allows you to evaluate the outputs of different foundation models using built-in or custom prompt datasets. This helps determine the model best suited for your application."
   },
   {
-    "question": "How does pricing work for the different foundation models in Amazon Bedrock?",
-    "answer": "The pricing for each foundation model in Amazon Bedrock is listed in the console on the model providers page. It is based on the volume of input and output tokens, and any provisioned throughput purchased."
+    "question": "Is model evaluation generally available in Amazon Bedrock?",
+    "answer": "No, model evaluation is currently in preview release for Amazon Bedrock and is subject to change."
+  },
+  {
+    "question": "How do you access foundation models in Amazon Bedrock?",
+    "answer": "Amazon Bedrock provides access to foundation models from leading AI startups and Amazon through a unified API. You can choose from a wide range of models to find the one best suited for your use case."
+  },
+  {
+    "question": "What types of generative AI applications can you build with Amazon Bedrock?",
+    "answer": "Amazon Bedrock provides capabilities for building various types of generative AI applications with features for security, privacy, and responsible AI. This could include applications for content generation, task completion, data augmentation, and more."
+  },
+  {
+    "question": "Does Amazon Bedrock help simplify the development of generative AI applications?",
+    "answer": "Yes, Amazon Bedrock simplifies the development of generative AI applications by providing a fully managed service with foundation models, customization capabilities, and features for security, privacy and responsible AI."
+  },
+  {
+    "question": "How can Amazon Bedrock help you explore different foundation model capabilities?",
+    "answer": "Amazon Bedrock allows you to easily experiment with and evaluate top foundation models for your use cases. You can run inferences with different prompts and configurations to explore the capabilities of various models."
   },
   {
     "question": "What AWS tools can you use to integrate and deploy foundation models with Amazon Bedrock?",
-    "answer": "With Amazon Bedrock's serverless experience, you can easily integrate and deploy foundation models into your applications using standard AWS tools, without having to manage any infrastructure yourself."
+    "answer": "Amazon Bedrock allows you to easily integrate and deploy customized foundation models into your applications using familiar AWS tools, without having to manage any infrastructure."
   },
   {
-    "question": "Does Amazon Bedrock allow you to use foundation models from multiple AI providers?",
-    "answer": "Yes, Amazon Bedrock provides access to a range of high-performing foundation models from leading AI startups as well as Amazon itself, all through a unified API. This allows you to choose the best model for your needs."
+    "question": "How can Amazon Bedrock help enhance customer service applications?",
+    "answer": "With Amazon Bedrock, you can build agents that use foundation models and query knowledge bases to reason through and complete tasks to assist customers. This can help create more intelligent and capable customer service applications."
+  },
+  {
+    "question": "What techniques can be used to customize foundation models in Amazon Bedrock?",
+    "answer": "Amazon Bedrock supports customizing foundation models using techniques such as fine-tuning, which adjusts model parameters with your training data, and retrieval augmented generation, which incorporates information from your knowledge bases."
+  },
+  {
+    "question": "How can provisioned throughput make foundation model inference more efficient in Amazon Bedrock?",
+    "answer": "By purchasing provisioned throughput for a foundation model in Amazon Bedrock, you can run inference more efficiently and at discounted rates compared to on-demand usage. This reserves dedicated capacity for your requests."
+  },
+  {
+    "question": "What is continued pre-training in the context of Amazon Bedrock?",
+    "answer": "Continued pre-training in Amazon Bedrock refers to further training a foundation model on your domain-specific data before fine-tuning. This helps adapt the model to your use case while leveraging the general knowledge from pre-training."
+  },
+  {
+    "question": "How can you prevent a generative AI application from producing undesirable outputs with Amazon Bedrock?",
+    "answer": "Amazon Bedrock provides guardrails that you can use to implement safeguards and prevent your generative AI applications from producing inappropriate or unwanted content."
+  },
+  {
+    "question": "Where can you find the supported AWS Regions for Amazon Bedrock?",
+    "answer": "The list of AWS Regions supported by Amazon Bedrock can be found in the Amazon Bedrock documentation under the 'Supported AWS Regions' page."
+  },
+  {
+    "question": "How can you see the volume of input and output tokens used for billing in Amazon Bedrock?",
+    "answer": "The Amazon Bedrock billing is based on the volume of input and output tokens used when running inference on foundation models. You can view your usage and charges in the AWS Billing and Cost Management Console."
   }
 ]

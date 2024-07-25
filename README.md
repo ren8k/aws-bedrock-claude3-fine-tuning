@@ -4,9 +4,10 @@
 
 - [x] データセットの調査
 - [x] データセットの作成
-- [ ] Fine-Tuning Job の実行
+- [x] Fine-Tuning Job の実行
   - model name: claude-3-haiku-ft-model
   - job name: claude-3-haiku-ft-job
+  - role: claude-3-haiku-ft-role
 - [ ] 評価してみたい
 - [ ] 検証結果ブログの執筆
   - [ ] create_val_dataset.py のリファクタリング

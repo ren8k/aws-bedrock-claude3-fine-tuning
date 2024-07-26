@@ -94,10 +94,7 @@ def extract_tool_use_args(content: list) -> dict:
 
 def main(args: argparse.Namespace) -> None:
     prompt = f"""
-    <text>
     {args.order}
-    </text>
-
     {ToolConfig.tool_name} ツールのみを利用すること。
     """
     print(prompt)

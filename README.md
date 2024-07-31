@@ -55,6 +55,15 @@ No commitment で 50 分で検証を行う。
 - https://www.perplexity.ai/search/llmnofine-tuningwoxing-uji-nil-LXDILLZ.Q4ukZ9pY66Tnpg
 - https://www.perplexity.ai/search/llmwofine-tuningsurukotote-jin-h8DcckwlSg6e_1ZoY.2SVA
 
+### PFN の LLM の LoRA のブログ
+
+- https://tech.preferred.jp/ja/blog/llm-fine-tuning-for-domain-knowledge/
+
+> ここで、本来ドメイン知識は医療や法律といった特定のドメインに関する知識のことですが、実験設定を考慮し、事前学習データに含まれていないであろう日本語における知識を指すこととします。
+
+- その他
+  - https://www.ariseanalytics.com/activities/report/20240419-2/
+
 ### AWS
 
 - https://aws.amazon.com/jp/about-aws/whats-new/2024/07/fine-tuning-anthropics-claude-3-haiku-bedrock-preview/
@@ -64,11 +73,38 @@ No commitment で 50 分で検証を行う。
 ### qiita
 
 - https://qiita.com/revsystem/items/303487a39eea5924187c
+- https://qiita.com/moritalous/items/8d8e6b91c7289692644a
+- https://qiita.com/moritalous/items/ff2763bcd9408a1b395a
 - https://qiita.com/ren8k/items/3d5f66df251703b8407e
 - https://qiita.com/kazuneet/items/9b0dc3c37cc33f7b61d6
-- https://qiita.com/moritalous/items/ff2763bcd9408a1b395a
 
 ### ft のメリット
 
 - 最小限のコンテキストのみで良いので，コストが低い
 - 低レイテンシー
+
+- PT は 10 分程度で利用可能になった。
+- 2epoch だけだど全く学習できてない模様
+  - 10epoch, early stopping で試してみた
+  - これで駄目なら、データセット不足かも。
+  - もう少しデータセットを増やしてみるか、英語で聞いて比較してみるか。
+  - うまくいきそうだけどね。
+
+```
+![スクリーンショット 2024-07-24 121726.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/e29259df-c918-b618-5564-d8a5221d34e5.png)
+![スクリーンショット 2024-07-24 121845.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/2ef34d9d-125a-f632-58ad-a5f05aba2c2a.png)
+![スクリーンショット 2024-07-26 203659.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/706fad24-c0a1-ef54-c6ee-76366f2b029a.png)
+![スクリーンショット 2024-07-26 203928.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/32b298e0-1e81-0226-7e57-f50975d3902b.png)
+![スクリーンショット 2024-07-26 203949.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/c6309f0a-0bf5-71eb-02e4-5d2549e1bdf9.png)
+![スクリーンショット 2024-07-26 204256.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/9d38d8ae-8e7b-5556-ff99-2e765414dfdc.png)
+```
+
+# これは使えんけど
+
+```
+![スクリーンショット 2024-07-26 195723.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/7862b159-f759-b7ec-02f9-146e426bcdb0.png)
+![スクリーンショット 2024-07-26 195943.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/26169f6d-862f-287b-ddf2-70413d803264.png)
+![スクリーンショット 2024-07-26 200145.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/229a40e6-a187-52e7-49bf-2ca1970efe30.png)
+![スクリーンショット 2024-07-26 201355.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/bbc725cc-affa-90ca-fbea-5044abc44dbb.png)
+![スクリーンショット 2024-07-26 201547.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3792375/6ba0583f-6a33-99c6-6873-3a2ffc85990f.png)
+```

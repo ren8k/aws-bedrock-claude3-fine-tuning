@@ -2,10 +2,10 @@ import json
 
 import boto3
 
-model_id = "<import model arn>"
+model_id = "<provisioned throughput arn>"
 
 system_prompt = "You are a high-performance QA assistant that responds to questions concisely, accurately, and appropriately."
-prompt = "hogehoge"
+prompt = "What can you do with Amazon Bedrock?"
 
 client = boto3.client(service_name="bedrock-runtime", region_name="us-west-2")
 
@@ -24,5 +24,5 @@ response = client.invoke_model(
 )
 output = response.get("body").read().decode("utf-8")
 response_body = json.loads(output)
-response_text = response_body["outputs"][0]["text"]
+response_text = response_body["content"][0]["text"]
 print(response_text)

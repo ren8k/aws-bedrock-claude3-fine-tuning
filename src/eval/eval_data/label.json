@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What can you do with Amazon Bedrock?",
+    "answer": "Amazon Bedrock enables you to build generative AI applications using high-performing foundation models. You can create original content, generate realistic images, provide personalized recommendations, summarize text, and assist with tasks like question answering and code generation. It also allows for private customization of models, ensuring data privacy and security throughout the process."
+  },
+  {
+    "question": "What is Knowledge Bases for Amazon Bedrock?",
+    "answer": "Knowledge Bases for Amazon Bedrock is a feature that allows you to securely connect foundation models to your company's data sources for retrieval-augmented generation. It supports various data formats, chunks documents for efficient processing, and uses the Titan Text Embeddings model. This integration enhances the accuracy and context-awareness of generated content by incorporating external data into the AI's responses."
+  },
+  {
+    "question": "What are Agents for Amazon Bedrock?",
+    "answer": "Agents for Amazon Bedrock are fully managed capabilities that automatically break down complex tasks, create orchestration plans, and securely connect to company data through APIs. They generate accurate responses for tasks like automating inventory management or processing insurance claims. These agents leverage foundation models to enhance productivity and efficiency in various business processes."
+  },
+  {
+    "question": "What are Guardrails for Amazon Bedrock?",
+    "answer": "Guardrails for Amazon Bedrock are safeguards that help control interactions with generative AI applications based on use cases and responsible AI policies. They enable filtering of undesirable content, redacting personally identifiable information, and enhancing content safety and privacy. Guardrails can be used with all large language models available on Bedrock, including fine-tuned models and Agents, to ensure responsible AI development."
+  }
+]

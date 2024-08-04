@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What can you do with Amazon Bedrock?",
+    "answer": "Amazon Bedrock is a fully managed service that provides a quick, effective, and secure path to building generative AI applications powered by foundation models from Amazon, Anthropic, Stability AI, Cohere, and other integrated providers. It simplifies the creation and deployment of cutting-edge customized models and foundational models for a wide range of natural language processing (NLP), text-to-image, and speech-to-text use cases, all while focusing on security, data privacy, and responsible AI."
+  },
+  {
+    "question": "What is Knowledge Bases for Amazon Bedrock?",
+    "answer": "Knowledge Bases for Amazon Bedrock is a feature that allows you to seamlessly integrate structured and unstructured data sources into your large language model (LLM) applications built on Amazon Bedrock. This feature enables you to enhance the context and knowledge available to your models, leading to more informed and relevant responses.\n\nWith Knowledge Bases for Amazon Bedrock, you can connect your LLM applications to a variety of data sources, including databases, content management systems, enterprise applications, and file storage services. The feature supports a wide range of data formats, including structured data (e.g., CSV, Excel, SQL), unstructured data (e.g., PDF, Word, HTML), and semi-structured data (e.g., JSON, XML).\n\nOnce your data sources are connected, Knowledge Bases for Amazon Bedrock automatically ingests and processes the content, creating a searchable index that can be seamlessly integrated into your LLM applications. This integration allows your models to access and leverage the contextual information from these data sources, enhancing the accuracy, relevance, and specificity of their responses."
+  },
+  {
+    "question": "What are Agents for Amazon Bedrock?",
+    "answer": "Agents for Amazon Bedrock are pre-built AI agents like Claude or Exporter that can be easily added via APIs while maintaining flexibility and customization. They are ready-to-use capabilities for rapid development of conversational AI apps and workflows."
+  },
+  {
+    "question": "What are Guardrails for Amazon Bedrock?",
+    "answer": "Guardrails for Amazon Bedrock is a feature that allows you to manage and mitigate potential risks associated with the use of large language models (LLMs) in various applications.\n\nGuardrails for Amazon Bedrock provides a set of controls and policies that can be applied to the input and output of the LLM to help ensure responsible and ethical use, alignment with organizational policies, and protection against potential misuse or harm. These controls can include content filtering, sensitive data detection, profanity filtering, hate speech detection, and other safeguards.\n\nWith Guardrails for Amazon Bedrock, you can implement controls to prevent or mitigate the generation of inappropriate, harmful, or biased content, as well as ensure compliance with regulations and organizational policies. This feature helps organizations to build responsible and trustworthy AI applications that leverage the power of LLMs while maintaining control and oversight over the content generated."
+  }
+]

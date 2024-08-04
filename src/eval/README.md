@@ -39,10 +39,21 @@ answer: Amazon Bedrock is a fully managed service that offers a choice of high-p
 
 # 評価方法
 
-`eval/evaluate.py` を利用して，以下のコマンドを実行することで，評価を行うことができる．
+`eval/evaluate.py` を実行することで，モデルの結果に対する評価を行うことができる．例えば，fine-tuning を行っていないモデルを評価する場合，以下のコマンドを実行する（fine-tuning を行ったモデルを評価する場合，引数指定は不要）．
 
-https://python.langchain.com/v0.1/docs/guides/productionization/evaluation/string/scoring_eval_chain/
+```bash
+#!/bin/bash
 
-https://api.python.langchain.com/en/latest/evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType
+PREDICTION_FILE="./eval_data/base-model_prediction.json"
 
-https://api.python.langchain.com/en/latest/evaluation/langchain.evaluation.criteria.eval_chain.Criteria.html
+python3 evaluate.py \
+    --prediction-file $PREDICTION_FILE
+```
+
+# 参考
+
+- [Scoring Evaluator](https://python.langchain.com/v0.1/docs/guides/productionization/evaluation/string/scoring_eval_chain/)
+- [langchain.evaluation.loading.load_evaluator](https://api.python.langchain.com/en/latest/evaluation/langchain.evaluation.loading.load_evaluator.html)
+- [langchain.evaluation.schema.EvaluatorType](https://api.python.langchain.com/en/latest/evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType)
+- [langchain.evaluation.criteria.eval_chain.Criteria](https://api.python.langchain.com/en/latest/evaluation/langchain.evaluation.criteria.eval_chain.Criteria.html)
+- [すごいぞ Langfuse！トークン数計算機能と評価機能を検証](https://qiita.com/moritalous/items/e07448ec0ec5e0132276)

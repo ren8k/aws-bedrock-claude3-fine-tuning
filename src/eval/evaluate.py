@@ -26,8 +26,6 @@ def load_json(file_path: str) -> dict:
 
 
 def main(args: argparse.Namespace) -> None:
-    # prediction_file = "./eval_data/base-model_prediction.json"
-
     predictions = load_json(args.prediction_file)
     labels = load_json(args.label_file)
 

@@ -1,16 +1,23 @@
+import argparse
 import json
 
-from langchain.evaluation import load_evaluator
+from langchain.evaluation import Criteria, EvaluatorType, load_evaluator
 from langchain_aws import ChatBedrock
 
-ACCURACY_CRITERIA = {
-    "accuracy": """
-    Score 1: The answer is completely unrelated to the reference.
-    Score 3: The answer has minor relevance but does not align with the reference.
-    Score 5: The answer has moderate relevance but contains inaccuracies.
-    Score 7: The answer aligns with the reference but has minor errors or omissions.
-    Score 10: The answer is completely accurate and aligns perfectly with the reference."""
-}
+
+def get_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--prediction-file",
+        type=str,
+        default="./eval_data/fine-tuning-model_prediction.json",
+    )
+    parser.add_argument(
+        "--label-file",
+        type=str,
+        default="./eval_data/label.json",
+    )
+    return parser.parse_args()
 
 
 def load_json(file_path: str) -> dict:
@@ -18,13 +25,11 @@ def load_json(file_path: str) -> dict:
         return json.load(f)
 
 
-def main() -> None:
+def main(args: argparse.Namespace) -> None:
+    # prediction_file = "./eval_data/base-model_prediction.json"
 
-    input = "What can you do with Amazon Bedrock?"
-
-    prediction = """Amazon Bedrock is a fully managed service that provides a quick, effective, and secure path to building generative AI applications powered by foundation models from Amazon, Anthropic, Stability AI, Cohere, and other integrated providers. It simplifies the creation and deployment of cutting-edge customized models and foundational models for a wide range of natural language processing (NLP), text-to-image, and speech-to-text use cases, all while focusing on security, data privacy, and responsible AI."""
-
-    label = """Amazon Bedrock is a versatile platform that enables developers to harness the power of generative AI for a wide range of applications. With Bedrock, you can access high-performance foundation models from leading providers and customize them for specific use cases. The platform supports various tasks such as content creation, image generation, personalized recommendations, text summarization, and code generation. Bedrock also offers tools for responsible AI development, including model evaluation and content filtering. Its serverless architecture and integration with other AWS services make it easy to build, deploy, and scale generative AI applications securely. Whether you're working on natural language processing, creative projects, or industry-specific solutions, Amazon Bedrock provides the infrastructure and capabilities to bring your generative AI ideas to life."""
+    predictions = load_json(args.prediction_file)
+    labels = load_json(args.label_file)
 
     model = ChatBedrock(
         model_id="anthropic.claude-3-5-sonnet-20240620-v1:0",
@@ -35,20 +40,27 @@ def main() -> None:
     )
 
     evaluator = load_evaluator(
-        "labeled_score_string",
-        criteria=ACCURACY_CRITERIA,
+        evaluator=EvaluatorType.LABELED_SCORE_STRING,
+        criteria=Criteria.CORRECTNESS,
         llm=model,
     )
 
-    # Correct
-    eval_result = evaluator.evaluate_strings(
-        prediction=prediction,
-        reference=label,
-        input=input,
-    )
-    print(eval_result)
-    print(eval_result["score"])
+    scores = []
+    for prediction, label in zip(predictions, labels):
+        # print(f"Prediction: {prediction}, Label: {label}")
+        eval_result = evaluator.evaluate_strings(
+            prediction=prediction["answer"],
+            reference=label["answer"],
+            input=label["question"],
+        )
+        print(eval_result)
+        print(eval_result["score"])
+        scores.append(eval_result["score"])
+
+    score_average = sum(scores) / len(scores)
+    print(f"Average score: {score_average}")
 
 
 if __name__ == "__main__":
-    main()
+    args = get_args()
+    main(args)

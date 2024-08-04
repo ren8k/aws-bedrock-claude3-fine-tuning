@@ -52,9 +52,9 @@ def plot_loss_curves(
 
 
 def main() -> None:
-    train_file = "../../result/step_wise_training_metrics.csv"
-    val_file = "../../result/validation_metrics.csv"
-    save_path = "./loss_curves.png"
+    train_file = "../../result/fine-tuning/step_wise_training_metrics.csv"
+    val_file = "../../result/fine-tuning/validation_metrics.csv"
+    save_path = "../../result/fine-tuning/loss_curves.png"
 
     train_epoch_loss = load_and_process_data(train_file, "training_loss")
     val_epoch_loss = load_and_process_data(val_file, "validation_loss")

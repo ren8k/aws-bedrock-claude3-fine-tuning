@@ -12,7 +12,7 @@
 - [ ] 検証結果ブログの執筆
   - [x] create_val_dataset.py のリファクタリング
 
-## Survey
+## Survey (fine-tuning の検証)
 
 - 語尾が「ござる」
   - https://huggingface.co/datasets/bbz662bbz/databricks-dolly-15k-ja-gozaru?row=99
@@ -20,7 +20,7 @@
 - Amazon Bedrock の QA
   - https://aws.amazon.com/jp/blogs/machine-learning/improve-rag-accuracy-with-fine-tuned-embedding-models-on-amazon-sagemaker/
   - https://github.com/aws-samples/fine-tune-embedding-models-on-sagemaker/blob/main/sentence-transformer/multiple-negatives-ranking-loss/training.json
-  - でもこれ 85 件しかない。
+    - でもこれ 85 件しかない。
 - NVIDIA のブログ
   - https://resources.nvidia.com/ja-jp-llm-developer-day/how-to-use-peft-on-nemo-framework?ncid=no-ncid
 
@@ -43,7 +43,7 @@
 
 ### プロビジョンスループットの参考
 
-No commitment で 50 分で検証を行う。
+No commitment で 50 分で検証を行うこと！
 
 - https://qiita.com/minorun365/items/4c5f69e120898179347d
 - https://dev.classmethod.jp/articles/bedrock-pt-min-unit/
@@ -64,11 +64,11 @@ No commitment で 50 分で検証を行う。
 - その他
   - https://www.ariseanalytics.com/activities/report/20240419-2/
 
-### AWS
+### AWS Blog(Claude3 fine-tuning)
 
-- https://aws.amazon.com/jp/about-aws/whats-new/2024/07/fine-tuning-anthropics-claude-3-haiku-bedrock-preview/
-- https://aws.amazon.com/jp/blogs/machine-learning/fine-tune-anthropics-claude-3-haiku-in-amazon-bedrock-to-boost-model-accuracy-and-quality/
-- https://docs.aws.amazon.com/bedrock/latest/userguide/custom-model-supported.html
+- [whats-news](https://aws.amazon.com/jp/about-aws/whats-new/2024/07/fine-tuning-anthropics-claude-3-haiku-bedrock-preview/)
+- [Fine-tune Anthropic’s Claude 3 Haiku in Amazon Bedrock to boost model accuracy and quality](https://aws.amazon.com/jp/blogs/machine-learning/fine-tune-anthropics-claude-3-haiku-in-amazon-bedrock-to-boost-model-accuracy-and-quality/)
+- [モデルのカスタマイズがサポートされている地域とモデル](https://docs.aws.amazon.com/bedrock/latest/userguide/custom-model-supported.html)
 - https://aws.amazon.com/jp/blogs/machine-learning/few-shot-prompt-engineering-and-fine-tuning-for-llms-in-amazon-bedrock/
 
 ### 評価の部分

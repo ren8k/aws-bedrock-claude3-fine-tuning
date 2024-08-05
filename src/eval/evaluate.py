@@ -10,12 +10,12 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--prediction-file",
         type=str,
-        default="./eval_data/fine-tuning-model_prediction.json",
+        default="../../dataset/eval/fine-tuning-model_prediction.json",
     )
     parser.add_argument(
         "--label-file",
         type=str,
-        default="./eval_data/label.json",
+        default="../../dataset/eval/label.json",
     )
     return parser.parse_args()
 

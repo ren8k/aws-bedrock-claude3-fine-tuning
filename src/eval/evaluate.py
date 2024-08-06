@@ -20,7 +20,7 @@ def get_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_json(file_path: str) -> dict:
+def load_json(file_path: str) -> list:
     with open(file_path, "r") as f:
         return json.load(f)
 

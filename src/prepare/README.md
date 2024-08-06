@@ -1,6 +1,6 @@
 # データセット作成方法
 
-`create_val_dataset.py` を実行し，検証データを作成します．具体的には，Amazon Bedrock FAQs のデータを利用し，検証データを Bedrock Converse API の Document chat と Json mode を利用して，JSON 形式の QA データを作成します．
+`create_val_dataset.py` を実行し，検証データを作成する．具体的には，Amazon Bedrock FAQs のデータを利用し，検証データを Bedrock Converse API の Document chat と Json mode を利用して，JSON 形式の QA データを作成する．
 
 ```bash
 python3 create_val_dataset.py
@@ -8,7 +8,7 @@ python3 create_val_dataset.py
 
 # データセットのフォーマット
 
-`preprocess.py` を実行し，データセットを前処理します．具体的には，以下のような，Claude3 Haiku が学習できる形式に変換します．
+`preprocess.py` を実行し，データセットを前処理する．具体的には，以下のような，Claude3 Haiku が学習できる形式に変換する．
 
 ```
 {"system": string, "messages": [{"role": "user", "content": string}, {"role": "assistant", "content": string}]}

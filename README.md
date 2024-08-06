@@ -1,6 +1,6 @@
 # Bedrock Claude3 Fine-Tuning
 
-本リポジトリは，Amazon Bedrock 上で Claude3 Haiku を Fine-Tuning する際に利用したコードを公開しています．主に，データセット作成，前処理，モデルの評価のためのコードが含まれています．
+本リポジトリは，Amazon Bedrock 上で Claude3 Haiku を Fine-Tuning する際に利用したコードを公開している．主に，データセット作成，前処理，モデルの評価のためのコードが含まれる．
 
 > [!NOTE]
 > Claude3 Haiku を Fine-Tuning し，モデルを評価した際の解説記事を Qiita に投稿しております．

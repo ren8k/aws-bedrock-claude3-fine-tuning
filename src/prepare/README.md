@@ -8,4 +8,28 @@ python3 create_val_dataset.py
 
 # データセットのフォーマット
 
+`preprocess.py` を実行し，データセットを前処理します．具体的には，以下のような，Claude3 Haiku が学習できる形式に変換します．
+
+```
+{"system": string, "messages": [{"role": "user", "content": string}, {"role": "assistant", "content": string}]}
+{"system": string, "messages": [{"role": "user", "content": string}, {"role": "assistant", "content": string}]}
+{"system": string, "messages": [{"role": "user", "content": string}, {"role": "assistant", "content": string}]}
+```
+
+## 検証データの場合
+
+```bash
+python3 preprocess.py
+```
+
+## 訓練データの場合
+
+```bash
+bash run_preprocess.sh
+```
+
 # データセットの検証（Data Validation）
+
+```bash
+python3 data_validation.py
+```

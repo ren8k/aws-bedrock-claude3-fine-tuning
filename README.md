@@ -5,7 +5,7 @@
 > [!NOTE]
 > Claude3 Haiku を Fine-Tuning し，モデルを評価した際の解説記事を Qiita に投稿しております．
 > 是非そちらもご覧下さい！
-> <br>[Amazon Bedrock 上で Claude3 Haiku を Fine-Tuning してみた](https://qiita.com/ren8k/items/XXXXXXXXXXXXXXXXXXXX)
+> <br>[Amazon Bedrock で Claude3 Haiku を Fine-Tuning し，評価する](https://qiita.com/ren8k/items/XXXXXXXXXXXXXXXXXXXX)
 
 ## ディレクトリ構成
 

@@ -63,7 +63,3 @@ python3 eval_llm_as_a_judge.py \
 - [langchain.evaluation.schema.EvaluatorType](https://api.python.langchain.com/en/latest/evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType)
 - [langchain.evaluation.criteria.eval_chain.Criteria](https://api.python.langchain.com/en/latest/evaluation/langchain.evaluation.criteria.eval_chain.Criteria.html)
 - [すごいぞ Langfuse！トークン数計算機能と評価機能を検証](https://qiita.com/moritalous/items/e07448ec0ec5e0132276)
-
-```
-
-```

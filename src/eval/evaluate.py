@@ -25,10 +25,7 @@ def load_json(file_path: str) -> list:
         return json.load(f)
 
 
-def main(args: argparse.Namespace) -> None:
-    predictions = load_json(args.prediction_file)
-    labels = load_json(args.label_file)
-
+def llm_as_a_judge(predictions: list, labels: list) -> None:
     model = ChatBedrock(
         model_id="anthropic.claude-3-5-sonnet-20240620-v1:0",
         region_name="us-east-1",
@@ -57,6 +54,13 @@ def main(args: argparse.Namespace) -> None:
 
     score_average = sum(scores) / len(scores)
     print(f"Average score: {score_average}")
+
+
+def main(args: argparse.Namespace) -> None:
+    predictions = load_json(args.prediction_file)
+    labels = load_json(args.label_file)
+
+    llm_as_a_judge(predictions, labels)
 
 
 if __name__ == "__main__":

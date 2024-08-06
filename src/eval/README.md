@@ -3,7 +3,7 @@
 以下を実行すると，各 loss の推移を png で保存できる．
 
 ```bash
-python observe_loss.py
+python3 observe_loss.py
 ```
 
 # 評価データセットの作成方法
@@ -39,16 +39,22 @@ answer: Amazon Bedrock is a fully managed service that offers a choice of high-p
 
 # 評価方法
 
-`eval/evaluate.py` を実行することで，モデルの結果に対する評価を行うことができる．例えば，fine-tuning を行っていないモデルを評価する場合，以下のコマンドを実行する（fine-tuning を行ったモデルを評価する場合，引数指定は不要）．
+## LLM-as-a-Judge
+
+`eval_llm_as_a_judge.py` を実行することで，モデルの推論結果と[ラベル（想定回答）](https://github.com/ren8k/aws-bedrock-claude3-fine-tuning/blob/main/dataset/eval/label.json)を比較した際の正確性を評価を LLM-as-a-Judge で行うことができる．例えば，fine-tuning を行っていないモデルを評価する場合，以下のコマンドを実行する（fine-tuning を行ったモデルを評価する場合，引数指定は不要）．なお，以下のコマンドは `run_evaluate.sh` に記載されている．
 
 ```bash
 #!/bin/bash
 
 PREDICTION_FILE="./eval_data/base-model_prediction.json"
 
-python3 evaluate.py \
+python3 eval_llm_as_a_judge.py \
     --prediction-file $PREDICTION_FILE
 ```
+
+## BERTScore
+
+`eval_bert_score.py` を実行することで，モデルの推論結果と[ラベル（想定回答）](https://github.com/ren8k/aws-bedrock-claude3-fine-tuning/blob/main/dataset/eval/label.json)を比較した際の正確性を評価を BERTScore で行うことができる．利用方法は上記と同様．
 
 # 参考
 
@@ -57,3 +63,7 @@ python3 evaluate.py \
 - [langchain.evaluation.schema.EvaluatorType](https://api.python.langchain.com/en/latest/evaluation/langchain.evaluation.schema.EvaluatorType.html#langchain.evaluation.schema.EvaluatorType)
 - [langchain.evaluation.criteria.eval_chain.Criteria](https://api.python.langchain.com/en/latest/evaluation/langchain.evaluation.criteria.eval_chain.Criteria.html)
 - [すごいぞ Langfuse！トークン数計算機能と評価機能を検証](https://qiita.com/moritalous/items/e07448ec0ec5e0132276)
+
+```
+
+```

@@ -1,5 +1,19 @@
 # Fine-Tuning
 
+## 参考
+
+- [bedrock-fine-tuning/claude-haiku/01_Claude_Haiku_Fine_Tuning.ipynb](https://github.com/aws-samples/amazon-bedrock-samples/blob/main/bedrock-fine-tuning/claude-haiku/01_Claude_Haiku_Fine_Tuning.ipynb)
+- [Amazon Bedrock で Anthropic の Claude 3 Haiku を微調整し、モデルの精度と品質を向上](https://aws.amazon.com/jp/blogs/machine-learning/fine-tune-anthropics-claude-3-haiku-in-amazon-bedrock-to-boost-model-accuracy-and-quality/)
+- [Amazon Kendra と Amazon Bedrock で構成した RAG システムに対する Advanced RAG 手法の精度寄与検証](https://aws.amazon.com/jp/blogs/news/verifying-the-accuracy-contribution-of-advanced-rag-methods-on-rag-systems-built-with-amazon-kendra-and-amazon-bedrock/)
+- [API と OSS 、蓄積したデータで精度を改善するならどちらの基盤モデルを選択すべきか : 質問回答編](https://aws.amazon.com/jp/blogs/news/cost-efficiency-of-api-and-oss-generative-ai/)
+- [日本語大規模言語モデル OpenCALM の知識でクイズ王に挑戦する](https://aws.amazon.com/jp/blogs/news/open-calm-and-openai-chatgpt-accuracy-on-jaqket-experiment-in-amazon-sagemaker/)
+- [Amazon Bedrock でモデルをカスタムして偉大なミュージシャンを降臨させた(?)話](https://qiita.com/triwave33/items/b36f85f95db44d252e32)
+- [Anthropic Tokenizer](https://lunary.ai/anthropic-tokenizer)
+- [Fine-Tuning😞 vs. RAG🏆 (2024 Microsoft 論文)](https://qiita.com/DeepMata/items/05221c2914d1cfbf32ee)
+- [プロンプトエンジニアリング vs ファインチューニング vs RAG](https://myscale.com/blog/ja/prompt-engineering-vs-finetuning-vs-rag/)
+- [Few-shot prompt engineering and fine-tuning for LLMs in Amazon Bedrock](https://aws.amazon.com/jp/blogs/machine-learning/few-shot-prompt-engineering-and-fine-tuning-for-llms-in-amazon-bedrock/)
+- [すごいぞ Langfuse！トークン数計算機能と評価機能を検証](https://qiita.com/moritalous/items/e07448ec0ec5e0132276)
+
 ## TODO
 
 - [x] データセットの調査

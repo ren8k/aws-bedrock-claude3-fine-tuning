@@ -1,36 +1,61 @@
+import argparse
+import json
+
 from bert_score import score
 
 
-def calc_bert_score(cands, refs):
-    P, R, F1 = score(cands, refs, lang="ja", verbose=True)
-    return F1.numpy().tolist()  # 複数のデータを一気に計算する場合はこちら
-    # return F1.item() # データを1つずつ計算する場合はこちら
+def get_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--prediction-file",
+        type=str,
+        default="../../dataset/eval/fine-tuning-model_prediction.json",
+    )
+    parser.add_argument(
+        "--label-file",
+        type=str,
+        default="../../dataset/eval/label.json",
+    )
+    return parser.parse_args()
 
 
-refs = [
-    "夕食には寿司を食べるのが好きです。",
-    "今日はいい天気ですね",
-    "今日は本当にいい天気",
-    "暇な時間にはビデオゲームをするのが好きです。",
-    "太陽が空で輝いています。",
-    "今週末、海に旅行に行くつもりです。",
-]
-cands = [
-    "夕食に食べるのは寿司が一番好きな食べ物です。",
-    "今日は良くない天気ですね",
-    "今日は本当にいい天気",
-    "暇な時間にはビデオゲームをするのは楽しいです。",
-    "外では今、激しい雨が降っています。",
-    "週末は仕事で、楽しいことをすることができません。",
-]
-
-# 複数データを一気に計算するプログラム
-f1_score = calc_bert_score(refs, cands)
-for r, c, f1 in zip(refs, cands, f1_score):
-    print(f"refs: {r}, cands: {c}, f1_score: {f1}")
+def load_json(file_path: str) -> list:
+    with open(file_path, "r") as f:
+        return json.load(f)
 
 
-# データを一つずつ計算するプログラム
-# for i in range(len(refs)):
-#     f1_score = calc_bert_score([refs[i]], [cands[i]])
-#     print(f"refs: {refs[i]}, cands: {cands[i]}, f1_score: {f1_score}")
+def get_target_sentences(qa_list: list) -> list:
+    sentences = []
+    for qa in qa_list:
+        sentences.append(qa["answer"])
+    return sentences
+
+
+def calc_bert_score(cands: list, refs: list) -> tuple:
+    Precision, Recall, F1 = score(cands, refs, lang="ja", verbose=True)
+    return Precision.numpy().tolist(), Recall.numpy().tolist(), F1.numpy().tolist()
+
+
+def bert_score(predictions: list, labels: list) -> None:
+    cands = get_target_sentences(predictions)
+    refs = get_target_sentences(labels)
+
+    P, R, F1 = calc_bert_score(cands, refs)
+    for p, r, f1 in zip(P, R, F1):
+        print(f"precision: {p}, recall: {r}, f1_score: {f1}")
+
+    print(f"Average precision: {sum(P) / len(P)}")
+    print(f"Average recall: {sum(R) / len(R)}")
+    print(f"Average f1_score: {sum(F1) / len(F1)}")
+
+
+def main(args: argparse.Namespace) -> None:
+    predictions = load_json(args.prediction_file)
+    labels = load_json(args.label_file)
+
+    bert_score(predictions, labels)
+
+
+if __name__ == "__main__":
+    args = get_args()
+    main(args)

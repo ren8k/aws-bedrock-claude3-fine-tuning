@@ -14,6 +14,10 @@
 - [Few-shot prompt engineering and fine-tuning for LLMs in Amazon Bedrock](https://aws.amazon.com/jp/blogs/machine-learning/few-shot-prompt-engineering-and-fine-tuning-for-llms-in-amazon-bedrock/)
 - [すごいぞ Langfuse！トークン数計算機能と評価機能を検証](https://qiita.com/moritalous/items/e07448ec0ec5e0132276)
 
+- [PFN: 1,000 億パラメータ規模の独自 LLM「PLaMo-100B」の事前学習](https://tech.preferred.jp/ja/blog/plamo-100b/)
+- [PFN: 1,000 億パラメータの独自 LLM「PLaMo-100B」の事後学習が完了](https://tech.preferred.jp/ja/blog/plamo-100b-post-training/)
+- [Twitter](https://x.com/hillbig/status/1821029105485410506?s=61)
+
 ## TODO
 
 - [x] データセットの調査

@@ -5,7 +5,7 @@
 > [!NOTE]
 > Claude3 Haiku を Fine-Tuning し，モデルを評価した際の解説記事を Qiita に投稿しております．
 > 是非そちらもご覧下さい！
-> <br>[Amazon Bedrock で Advanced RAG を実装する上での Tips](https://qiita.com/ren8k/items/060cc15f10e492b2d987)
+> <br>[Amazon Bedrock における Claude 3 Haiku の Fine-Tuning 検証レポート](https://qiita.com/ren8k/items/060cc15f10e492b2d987)
 
 ## ディレクトリ構成
 
